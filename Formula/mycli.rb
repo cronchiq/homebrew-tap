@@ -5,20 +5,20 @@
 class Mycli < Formula
   desc "My CLI demo"
   homepage "https://github.com/cronchiq/mycli"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/cronchiq/mycli/releases/download/v0.1.3/mycli_v0.1.3_darwin_arm64.tar.gz"
-      sha256 "b96fea994ee5854a651aaab891afec620baa1908da6b711729836574d0670d48"
+    if Hardware::CPU.intel?
+      url "https://github.com/cronchiq/mycli/releases/download/v0.1.4/mycli_v0.1.4_darwin_amd64.tar.gz"
+      sha256 "0c68dc79ebd96f60e64d203cccb2b0c37186cca500ac31b48e6b8dfc85a18f45"
 
       def install
         bin.install "mycli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/cronchiq/mycli/releases/download/v0.1.3/mycli_v0.1.3_darwin_amd64.tar.gz"
-      sha256 "cc0bc4ae017bd7d2aa0c080f9af2c47db7476ef06dacf78f7f3aecce7506937f"
+    if Hardware::CPU.arm?
+      url "https://github.com/cronchiq/mycli/releases/download/v0.1.4/mycli_v0.1.4_darwin_arm64.tar.gz"
+      sha256 "fa6ef2883bd1a28628c02dbc513a52535909ca4234239fd488531269ed60f6c2"
 
       def install
         bin.install "mycli"
@@ -27,17 +27,17 @@ class Mycli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/cronchiq/mycli/releases/download/v0.1.3/mycli_v0.1.3_linux_amd64.tar.gz"
-      sha256 "adfed93c2d3e4e169a43a98f2267bfa4c7f38835337c71ec95bc3c17ceda98d4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/cronchiq/mycli/releases/download/v0.1.4/mycli_v0.1.4_linux_arm64.tar.gz"
+      sha256 "3109a474d1efe1f4e120104ea7b174867d4049ff46cd213388adcaed1493812a"
 
       def install
         bin.install "mycli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cronchiq/mycli/releases/download/v0.1.3/mycli_v0.1.3_linux_arm64.tar.gz"
-      sha256 "0a6a1e07bc3b47d5a1779c115c7c3d3ff98523755f83ec8c253a33c411aaaa0a"
+    if Hardware::CPU.intel?
+      url "https://github.com/cronchiq/mycli/releases/download/v0.1.4/mycli_v0.1.4_linux_amd64.tar.gz"
+      sha256 "413e47a653aa3f317f146d1e5f6801cce958bf41cdab352e66748e8e55263bfb"
 
       def install
         bin.install "mycli"
