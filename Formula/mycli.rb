@@ -5,20 +5,20 @@
 class Mycli < Formula
   desc "My CLI demo"
   homepage "https://github.com/cronchiq/mycli"
-  version "0.1.5"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/cronchiq/mycli/releases/download/v0.1.5/mycli_v0.1.5_darwin_arm64.tar.gz"
-      sha256 "dd0e5849aa0b1b80fed8e3018b6e6aaf91b873e2085f320482383622bb6b2bf5"
+      url "https://github.com/cronchiq/mycli/releases/download/v0.2.2/mycli_v0.2.2_darwin_arm64.tar.gz"
+      sha256 "6977aec50ec50916d25823575f2757da68e41b8b673a8af3deb23f3a88bf870b"
 
       def install
         bin.install "mycli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/cronchiq/mycli/releases/download/v0.1.5/mycli_v0.1.5_darwin_amd64.tar.gz"
-      sha256 "70853484e06c1c7a00a4ae617cda19352716362db6526c28e72af00351026598"
+      url "https://github.com/cronchiq/mycli/releases/download/v0.2.2/mycli_v0.2.2_darwin_amd64.tar.gz"
+      sha256 "c99b600b2994b9f6feac95fa69cec26a08105edf0fca83ec75296ebb63b14e0d"
 
       def install
         bin.install "mycli"
@@ -28,16 +28,16 @@ class Mycli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/cronchiq/mycli/releases/download/v0.1.5/mycli_v0.1.5_linux_amd64.tar.gz"
-      sha256 "a8d2ef372f40b55da16ef654f51a3978ac99e746884c837a678ba956a3b65f17"
+      url "https://github.com/cronchiq/mycli/releases/download/v0.2.2/mycli_v0.2.2_linux_amd64.tar.gz"
+      sha256 "e404a42a8a7c4f35d2164c17c88dc3fc9cb64316302b696bcc08c867fad807ea"
 
       def install
         bin.install "mycli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cronchiq/mycli/releases/download/v0.1.5/mycli_v0.1.5_linux_arm64.tar.gz"
-      sha256 "5ab34c27638b716195afd18dcd05a797fe1451c9cf0240d8f32d00d23e43a8d0"
+      url "https://github.com/cronchiq/mycli/releases/download/v0.2.2/mycli_v0.2.2_linux_arm64.tar.gz"
+      sha256 "bfaf854ee8ce9d6a9c40612d1056c93bfed8b5c3d3ca6851c533015ba0814e1b"
 
       def install
         bin.install "mycli"
